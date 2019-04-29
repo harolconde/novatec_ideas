@@ -1,0 +1,45 @@
+//Variables
+$backgroundTitleChat : #fff;
+$backgroundContChat : #fafafa;
+
+.containerChatIdeas{
+    padding: 0;
+    margin: 0;
+}
+.containerChatIdeas .row{
+    margin: 0;
+}
+.containerChatIdeas .row .titleChatIdeas{ 
+    background-color: $backgroundTitleChat;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+}
+.containerChatIdeas .row .titleChatIdeas h6{
+    padding-bottom: 0 !important;
+    font-weight: 700;
+}
+.containerChatIdeas .row .containerChat{
+    background-color: $backgroundContChat;
+    position: absolute;
+    width: 100%;
+    height: calc(65%);
+    z-index: 1001;
+    overflow-y: auto;
+    background-image: linear-gradient(rgba(109, 76, 65, 0.12), rgba(109, 76, 65, 0.12)), 
+    url('/assets/img/textures/doodles.png');
+    background-repeat: repeat;
+    margin-top: calc(7.578%);
+}
+.containerChatIdeas .row .seeAllIdeasChat{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(6%);
+    background-color: $backgroundTitleChat;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
