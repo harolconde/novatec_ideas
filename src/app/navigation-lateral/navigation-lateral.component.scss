@@ -1,0 +1,19 @@
+.containerBarLateral{
+    position: sticky;
+    height: calc(100vh);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    padding: 0;
+}
+.containerDatesChat{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.barLateral{
+    position: relative;
+}
+.lateralRightBoard{
+    //position: absolute;
+    //right: 0;
+}

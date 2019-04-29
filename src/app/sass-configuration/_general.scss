@@ -1,0 +1,21 @@
+// Variables
+$backgroundDisplay : #ddd;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.containerAplication{
+    background-color:$backgroundDisplay;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.sectionGeneral {
+    width: 100%;
+}
+.container-app{
+    display: flex;
+}
+
