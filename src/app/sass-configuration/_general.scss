@@ -14,8 +14,25 @@ $backgroundDisplay : #ddd;
 }
 .sectionGeneral {
     width: 100%;
+    overflow: hidden;
 }
 .container-app{
     display: flex;
 }
-
+.contaierFooterAplication{
+    bottom: 0;
+    width: 100%;
+}
+.clateralRightBoard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0 !important;
+    position: absolute;
+    right: 0;
+    background-color: $backgroundDisplay; 
+}
+.containerRoutesAplication{
+    width: 100%;
+}

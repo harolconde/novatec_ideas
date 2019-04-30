@@ -1,0 +1,26 @@
+//Colores
+$colorText : #444;
+$colorSocialNet : #444;
+
+.containerSocialNetwork{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.containerSocialNetwork .socialNetwork{
+    margin: 0rem 2rem 1rem 2rem;
+    font-size: 3.5rem;
+    color: $colorSocialNet;
+}
+.dateYear{
+    display: block;
+    position: relative;
+    padding: .5rem .5rem 2rem .5rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}

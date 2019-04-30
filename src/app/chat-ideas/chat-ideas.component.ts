@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-chat-ideas',
@@ -10,6 +11,12 @@ export class ChatIdeasComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
-
+  
 }
+$(function(){
+  $('[data-toggle="tooltip"]').tooltip()
+ })
+
+

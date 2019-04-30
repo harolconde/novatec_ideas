@@ -11,9 +11,14 @@ import { BoardIdeasComponent } from './board-ideas/board-ideas.component';
 import { FooterComponent } from './footer/footer.component';
 import { IdeasDeadComponent } from './ideas-dead/ideas-dead.component';
 import { IdeasFinishComponent } from './ideas-finish/ideas-finish.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: 'board', component: BoardIdeasComponent }
+  { path: 'home', component: HomeComponent},
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'board', component: BoardIdeasComponent },
+  
 ];
 
 @NgModule({
@@ -25,7 +30,8 @@ const routes: Routes = [
     BoardIdeasComponent,
     FooterComponent,
     IdeasDeadComponent,
-    IdeasFinishComponent
+    IdeasFinishComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
