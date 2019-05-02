@@ -6,19 +6,20 @@
     </div>
     <div class="col-12 containerChat">
       <div class="containerMessageIdeas">
-        <div class="contenedor">
+        <div class="contenedor" *ngFor="let idea of ideas; index as i">
           <div class="containerIdeaCredentials">
             <div class="imgUserInChat">
               <img [src]="'assets/img/userPerfil.png'" alt="">
             </div>
             <div class="containerNameVotes">
-              <h3 class="nameUserIdea">
+              <h3 class="nameUserIdea">{{idea.user}}
                 <ul class="containerBtnsLikesDslike">
                   <li class="listIconsMessage">
                     <div class="btnLikeMyHeark">
                       <ul class="contentBtnMyHeart">
                         <li>
                             <img [src]="'assets/img/icons/myHeart.svg'" alt="" data-toggle="tooltip" data-placement="top" title="Votos">
+                            <span> {{idea.votes}} </span>
                         </li>
                       </ul>
                       <ul class="votos">
@@ -37,7 +38,9 @@
                 </ul>
               </h3>
             </div>
-            <p class="ideaMessageChatUsers"></p>
+            <p class="ideaMessageChatUsers">
+              <a [routerLink]="['/idea', i]" class="paragraphIdea">{{idea.description}}</a>
+            </p>
             <div class="containerDisplayReply">
               <h4 class="replyTitle">Comentarios</h4>
               <ul class="elementReply list-group list-group-flush">

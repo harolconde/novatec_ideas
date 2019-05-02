@@ -1,0 +1,50 @@
+.sectionContainerIdea{
+    padding-bottom: 1.5rem;
+}
+.sectionContainerIdea .returnHome{
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.sectionContainerIdea .cardIdeaOne{
+    margin-bottom: 1.5rem;
+    &.votePositiveIdea{
+        color: #2e7d32;
+    }
+    &.voteNegativeIdea{
+        color: #b71c1c;
+    }
+}
+.sectionContainerIdea .cardIdeaOne .card-body{
+    padding: 0;
+}
+.sectionContainerIdea .cardIdeaOne .card-title{
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem;
+}
+.sectionContainerIdea .cardIdeaOne .cardContentIdea,.card-text{
+    padding: 1.5rem;
+}
+.sectionContainerIdea .cardIdeaOne .card-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionContainerIdea .cardIdeaOne .card-text span{
+    font-size: 8rem;
+}
+.sectionContainerIdea .cardIdeaOne .cardContentIdea .ideaAllinOne{
+    display: flex;
+    align-items: center;
+}
+.sectionContainerIdea .cardIdeaOne .cardContentIdea .ideaAllinOne img{
+    width: 90px;
+    height: auto;
+    padding: .5rem;
+}
+.sectionContainerIdea .cardIdeaOne .cardContentIdea .ideaAllinOne p{
+    padding: .5rem .5rem .5rem 1rem;
+}
+.sectionContainerIdea .cardIdeaOne .cardStatistics{
+    height: calc(36vh);
+}

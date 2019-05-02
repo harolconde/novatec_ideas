@@ -39,6 +39,7 @@ $backgroundContChat : #fafafa;
     background-image: linear-gradient(rgba(109, 76, 65, 0.12), rgba(109, 76, 65, 0.12)), 
     url('/assets/img/textures/doodles.png');
     background-repeat: repeat;
+    padding: 3px;
 }
 .containerChatIdeas .row .containerMessageIdeas{
     overflow-x: hidden;
@@ -48,7 +49,7 @@ $backgroundContChat : #fafafa;
 .containerChatIdeas .row .containerMessageIdeas .contenedor{
     width: 100%;
     margin-right: auto;
-    margin-left: 60px;
+    margin-left: 65px;
     font-size: 0.9rem;
     line-height: 135%;
     display: flex;
@@ -180,6 +181,10 @@ $backgroundContChat : #fafafa;
     font-size: 0.8rem;
     transition: all .5s;
 }
+.containerChatIdeas .row .containerMessageIdeas .contenedor .containerIdeaCredentials .ideaMessageChatUsers .paragraphIdea{
+    color: #444;
+    text-decoration: none;
+}
 .containerChatIdeas .row .containerMessageIdeas .contenedor .containerIdeaCredentials .containerDisplayReply{
     display: none;
     flex-direction: column;
@@ -237,4 +242,31 @@ $backgroundContChat : #fafafa;
 .containerChatIdeas .row .seeAllIdeasChat .linkSeeMoreIdeas{
     position: absolute;
     right: 10px;
+}
+
+//Estilos del scrollbar
+/* Configuracion y estilos del Scrollbar del chat de ideas*/
+
+.containerMessageIdeas::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+.containerMessageIdeas::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 4px;
+}
+.containerMessageIdeas::-webkit-scrollbar-thumb:hover{
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.containerMessageIdeas::-webkit-scrollbar-thumb:active{
+    background-color: #999999;
+}
+.containerMessageIdeas::-webkit-scrollbar-track{
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+.containerMessageIdeas::-webkit-scrollbar-track:hover,
+.containerMessageIdeas::-webkit-scrollbar-track:active{
+    background: #d4d4d4;
 }

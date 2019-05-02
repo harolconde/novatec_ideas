@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdeasService } from './../services/ideas.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,7 +9,11 @@ import * as $ from 'jquery';
 })
 export class ChatIdeasComponent implements OnInit {
 
-  constructor() { }
+  ideas:any[] = []
+
+  constructor(private _service:IdeasService) { 
+    this.ideas = _service.getDataIdeas();
+  }
 
   ngOnInit() {
     

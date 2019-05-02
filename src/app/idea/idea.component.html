@@ -1,0 +1,72 @@
+<section class="sectionContainerIdea">
+    <div class="col-12 returnHome">
+        <div class="container containerLinkReturn">
+            
+            <a [routerLink]="['/home']" class="linkHome"><i class="fas fa-chevron-left"></i> <span class="ml-2">Volver al inicio</span> </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4 col-xl-4 votePositiveIdea cardIdeaOne">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Votos +</h5>
+                        <p class="card-text">
+                            <span> {{ideas.votePos}} </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4 col-xl-4 voteNegativeIdea cardIdeaOne">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Votos -</h5>
+                        <div class="card-text">
+                        <span> {{ideas.voteNeg}} </span>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-lg-4 col-xl-4 voteMeehIdea cardIdeaOne">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Votos sin reaccion</h5>
+                        <p class="card-text">
+                        <span> {{ideas.voteMeeh}} </span>
+                        </p>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-lg-7 col-xl-7 ideaDescription cardIdeaOne">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Idea</h5>
+                        <div class="cardContentIdea">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item ideaAllinOne">
+                                    <img [src]="'assets/img/userPerfil.png'" alt="">
+                                    <p> {{ideas.description}} </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> {{ideas.user}} </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-5 col-xl-5 ideaStatistics cardIdeaOne">
+                <div class="card cardStatistics">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Estadisticas
+                        </h5>
+                        <div class="card-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
