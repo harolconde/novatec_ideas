@@ -34,17 +34,17 @@
                     <div class="card-body">
                         <h5 class="card-title">Las ideas mas botadas</h5>
                         <div class="containerCardIdeas" id="containerCardIdeas">
-                            <div *ngFor="let idea of ideas">
+                            <div *ngFor="let idea of ideas, index as i">
                                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
                                             <div class="carousel-inner" >
                                               <div class="carousel-item active" >
                                                 <div class="itemCardContainer" >
                                                     <div class="itemCard" >
                                                         <div class="containerNameVotes itemCardIdea">
-                                                            {{idea.votes}}
+                                                            {{i}} {{idea.votes}}
                                                         </div>
                                                         <p class="ideaMessageChatUsers">
-                                                            {{idea.description}}
+                                                            {{i}} {{idea.description}}
                                                         </p>
                                                         <button class="btn btn-block btnItemCard votingBtn upButton">Votar</button>
                                                     </div>
