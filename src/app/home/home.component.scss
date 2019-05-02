@@ -115,7 +115,38 @@ $colorBtnIdeas: #263238;
     overflow-y: hidden;
     overflow-x: hidden;
 }
-
+.sectionBoard .cardIdeas .card .card-body .containerCardIdeas .carousel .carousel-inner .carousel-item .itemCardContainer .itemCard .containerNameVotes{
+    width: 25px;
+    height: 31px;
+    padding: 0;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.sectionBoard .cardIdeas .card .card-body .containerCardIdeas .carousel .carousel-inner .carousel-item .itemCardContainer .itemCard .ideaMessageChatUsers{
+    display: block;
+    padding: 5px 8px 5px 8px;
+    font-size: .8rem;
+    color: #555;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.sectionBoard .cardIdeas .card .card-body .containerCardIdeas .carousel .carousel-inner .carousel-item .itemCardContainer .itemCard .btnItemCard{
+    position: absolute;
+    bottom: 0;
+    background-color: #fefefa;
+    border-radius: 0px 0px 3px 3px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
 //Modal
 .sectionModal{
     width: 100%;
