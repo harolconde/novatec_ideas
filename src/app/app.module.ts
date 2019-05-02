@@ -12,13 +12,14 @@ import { FooterComponent } from './footer/footer.component';
 import { IdeasDeadComponent } from './ideas-dead/ideas-dead.component';
 import { IdeasFinishComponent } from './ideas-finish/ideas-finish.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './users/login/login.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'board', component: BoardIdeasComponent },
-  
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -31,7 +32,8 @@ const routes: Routes = [
     FooterComponent,
     IdeasDeadComponent,
     IdeasFinishComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

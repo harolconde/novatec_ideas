@@ -3,6 +3,7 @@
 @import 'sass-configuration/variables';
 
 // Estilos de las paginas del sitio
+@import 'users/login/login.component.scss';
 @import 'navigation-lateral/navigation-lateral.component.scss';
 @import 'dates-user/dates-user.component.scss';
 @import 'chat-ideas/chat-ideas.component.scss';

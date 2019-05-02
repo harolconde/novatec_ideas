@@ -1,0 +1,48 @@
+.sectionLogin{
+    width: 100%;
+    height: auto;
+}
+.sectionLogin .containerDescriptionLogin{
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+}
+.sectionLogin .containerDescriptionLogin .titleApp .titleAppIdea{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 100px;
+    color: #555;
+    position: relative;
+}
+.contanierDescriptionApp .descriptionApp{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #555;
+    margin-top: 9rem;
+    position: relative;
+}
+.sectionLogin .containerDescriptionLogin .titleApp .titleAppIdea .titleIdeaBlok{
+    display: block;
+    position: absolute;
+    right: 0;
+    //font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 8rem;
+    color: #555;
+    text-shadow: #114357;
+    text-shadow: -webkit-linear-gradient(to left, #F29492, #114357);
+    text-shadow: linear-gradient(to left, #F29492, #114357);
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-align: center;
+}
+.sectionLogin .containerCardLogin{
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sectionLogin .containerCardLogin .cardLogin .card-body .btnLogin{
+    border-radius: 50px;
+}

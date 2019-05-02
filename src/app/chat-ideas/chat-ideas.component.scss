@@ -48,16 +48,16 @@ $backgroundContChat : #fafafa;
 .containerChatIdeas .row .containerMessageIdeas .contenedor{
     width: 100%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 60px;
     font-size: 0.9rem;
     line-height: 135%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 .containerChatIdeas .row .containerMessageIdeas .contenedor .containerIdeaCredentials{
     position: relative;
-    width: 80%;
+    width: 75%;
     margin: 10px;
     padding: 5px;
     background-color: $backgroundContChat;
