@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Votos +</h5>
                         <p class="card-text">
-                            <span> {{ideas.votePos}} </span>
+                            <span id="votePositive"> {{ideas.votePos}} </span>
                         </p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Votos -</h5>
                         <div class="card-text">
-                        <span> {{ideas.voteNeg}} </span>
+                        <span id="voteNegative"> {{ideas.voteNeg}} </span>
                         </div>
                     </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Votos sin reaccion</h5>
                         <p class="card-text">
-                        <span> {{ideas.voteMeeh}} </span>
+                        <span id="voteMeeh"> {{ideas.voteMeeh}} </span>
                         </p>
                     </div>
                     </div>
@@ -62,7 +62,7 @@
                             Estadisticas
                         </h5>
                         <div class="card-body">
-
+                            <canvas id="myChart" width="100%" height="100%"></canvas>
                         </div>
                     </div>
                 </div>
