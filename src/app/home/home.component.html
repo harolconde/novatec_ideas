@@ -34,14 +34,32 @@
                     <div class="card-body">
                         <h5 class="card-title">Las ideas mas botadas</h5>
                         <div class="containerCardIdeas" id="containerCardIdeas">
-                            <div *ngFor="let idea of ideas, index as i">
-                                <owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >
-                                    <div class="item" *ngFor="let image of mySlideImages;let i = index">
-                                     <div>
-                                       <img src={{image}}/>
-                                     </div>
+                            <div >
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item itemMoreVotes" *ngFor="let idea of ideas">
+                                        <div class="containerItem">
+                                            <div class="card" >
+                                                <div class="card-title">
+                                                    <span>Me gusta</span>
+                                                    <i class="material-icons ">turned_in</i>
+                                                    <span class="votes"> {{idea.votePos}} </span>
+                                                </div>
+                                                <div class="card-body contentIdeaDescription">
+                                                            {{idea.description}}
+                                                </div>
+                                                <button class="btn btn-block btnVoteCarousel">
+                                                            Votar
+                                                </button>
+                                            </div> 
+                                                            
+                                        </div>
                                     </div>
-                                   </owl-carousel>
+                                </div>
+                                <!-- <owl-carousel  *ngIf="ideas.state == 'publicada' && ideas.votePos < 12">
+                                    <div class="iterationOwl" *ngFor="let idea of ideas">
+                                       
+                                    </div>
+                                </owl-carousel> -->
                             </div>
                             
                             <!-- <ng-template #elseBlock>
@@ -55,58 +73,29 @@
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Ideas en proceso de aprobacion</h5>
-                        <div class="containerCardIdeas">
-                            <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" >
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
-                                            </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
+                        <div class="containerCardIdeas" >
+                                <owl-carousel>
+                                        <div class="iterableOwl" *ngFor="let idea of ideas, let i = index">
+                                                <div class="item itemMoreVotes" *ngIf="idea.state == 'aprobacion' && idea.votePos >= 12">
+                                                        <div class="containerItem" >
+                                                            <div class="card">
+                                                                <div class="card-title">
+                                                                    <span>Me gusta</span>
+                                                                    <i class="material-icons ">turned_in</i>
+                                                                    <span class="votes"> {{idea.votePos}} </span>
+                                                                </div>
+                                                                <div class="card-body contentIdeaDescription">
+                                                                    {{idea.description}}
+                                                                </div>
+                                                                <button class="btn btn-block btnVoteCarousel">
+                                                                    Votar
+                                                                </button>
+                                                            </div> 
+                                                            
+                                                        </div>
+                                                    </div>
                                         </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
-                                            </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
-                                            </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                              </div>
+                                    </owl-carousel>
                         </div>
                     </div>
                 </div>
@@ -116,57 +105,26 @@
                     <div class="card-body">
                         <h5 class="card-title">Ideas aprobadas</h5>
                         <div class="containerCardIdeas">
-                            <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
+                                <owl-carousel *ngFor="let idea of ideas, let i = index">
+                                        <div class="item itemMoreVotes" *ngIf="idea.state == 'aprobada' && idea.votePos >= 12">
+                                            <div class="containerItem" >
+                                                <div class="card">
+                                                    <div class="card-title">
+                                                        <span>Me gusta</span>
+                                                        <i class="material-icons ">turned_in</i>
+                                                        <span class="votes"> {{idea.votePos}} </span>
+                                                    </div>
+                                                    <div class="card-body contentIdeaDescription">
+                                                        {{idea.description}}
+                                                    </div>
+                                                    <button class="btn btn-block btnVoteCarousel">
+                                                        Votar
+                                                    </button>
+                                                </div> 
+                                                
                                             </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
                                         </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
-                                            </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="itemCardContainer">
-                                        <div class="itemCard">
-                                            <div class="containerNameVotes itemCardIdea">
-
-                                            </div>
-                                            <p class="ideaMessageChatUsers">
-
-                                            </p>
-                                            <button class="btn btn-block btnItemCard votingBtn upButton">Ver</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                              </div>
+                                    </owl-carousel>
                         </div>
                     </div>
                 </div>
