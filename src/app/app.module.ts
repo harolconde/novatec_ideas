@@ -20,12 +20,14 @@ import { IdeasFinishComponent } from './ideas-finish/ideas-finish.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
 import { IdeaComponent } from './idea/idea.component';
+import { AllIdeasComponent } from './all-ideas/all-ideas.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'idea/:id', component: IdeaComponent},
+  { path: 'todas', component: AllIdeasComponent},
   { path: 'board', component: BoardIdeasComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -42,7 +44,8 @@ const routes: Routes = [
     IdeasFinishComponent,
     HomeComponent,
     LoginComponent,
-    IdeaComponent
+    IdeaComponent,
+    AllIdeasComponent
   ],
   imports: [
     BrowserModule,

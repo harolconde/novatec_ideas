@@ -5,7 +5,16 @@ $backgroundDisplay : #ddd;
     margin: 0;
     padding: 0;
 }
-
+body{
+    background-color: $backgroundDisplay !important;
+}
+button {
+    outline: none !important;
+}
+.btn:focus, .btn.focus {
+    outline: 0 !important; 
+    box-shadow: none !important; 
+}
 .containerAplication{
     background-color:$backgroundDisplay;
     width: 100%;
