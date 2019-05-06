@@ -32,12 +32,12 @@
             <div class="col-sm-12 col-lg-8 col-xl-8 cardIdeas">
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
-                        <h5 class="card-title">Las ideas mas botadas</h5>
+                        <h5 class="card-title">Las ideas mas votadas</h5>
                         <div class="containerCardIdeas" id="containerCardIdeas">
                             <div >
-                                <div class="owl-carousel owl-theme">
+                                <div class=" owl-carousel-proposal owl-carousel owl-theme " >
                                     <div class="item itemMoreVotes" *ngFor="let idea of ideas">
-                                        <div class="containerItem">
+                                        <div class="containerItem" *ngIf="idea.state == 'propuesta'">
                                             <div class="card" >
                                                 <div class="card-title">
                                                     <span>Me gusta</span>
@@ -55,11 +55,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <owl-carousel  *ngIf="ideas.state == 'publicada' && ideas.votePos < 12">
-                                    <div class="iterationOwl" *ngFor="let idea of ideas">
-                                       
-                                    </div>
-                                </owl-carousel> -->
                             </div>
                             
                             <!-- <ng-template #elseBlock>
@@ -73,29 +68,26 @@
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Ideas en proceso de aprobacion</h5>
-                        <div class="containerCardIdeas" >
-                                <owl-carousel>
-                                        <div class="iterableOwl" *ngFor="let idea of ideas, let i = index">
-                                                <div class="item itemMoreVotes" *ngIf="idea.state == 'aprobacion' && idea.votePos >= 12">
-                                                        <div class="containerItem" >
-                                                            <div class="card">
-                                                                <div class="card-title">
-                                                                    <span>Me gusta</span>
-                                                                    <i class="material-icons ">turned_in</i>
-                                                                    <span class="votes"> {{idea.votePos}} </span>
-                                                                </div>
-                                                                <div class="card-body contentIdeaDescription">
-                                                                    {{idea.description}}
-                                                                </div>
-                                                                <button class="btn btn-block btnVoteCarousel">
-                                                                    Votar
-                                                                </button>
-                                                            </div> 
-                                                            
-                                                        </div>
-                                                    </div>
+                        <div class="containerCardIdeas " >
+                            <div>
+                                <div class="iterableOwl owl-carousel-process owl-carousel owl-theme  " >
+                                    <div class="item itemMoreVotes" *ngFor="let idea of ideas, let i = index">
+                                        <div class="containerItem" >
+                                            <div class="card">
+                                                <div class="card-title">
+                                                    <span>En aprobacion</span>
+                                                </div>
+                                                <div class="card-body contentIdeaDescription">
+                                                    {{idea.description}}
+                                                </div>
+                                                <button class="btn btn-block btnVoteCarousel">
+                                                    Ver
+                                                </button>
+                                            </div>               
                                         </div>
-                                    </owl-carousel>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,27 +96,30 @@
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Ideas aprobadas</h5>
-                        <div class="containerCardIdeas">
-                                <owl-carousel *ngFor="let idea of ideas, let i = index">
+                        <div class="containerCardIdeas .owl-carousel-idApro">
+                            <div>
+                                <div class="owl-carouse-aproved owl-carousel owl-theme">
+                                    <div *ngFor="let idea of ideas, let i = index">
                                         <div class="item itemMoreVotes" *ngIf="idea.state == 'aprobada' && idea.votePos >= 12">
                                             <div class="containerItem" >
                                                 <div class="card">
                                                     <div class="card-title">
-                                                        <span>Me gusta</span>
+                                                        <span>Proximamente</span>
                                                         <i class="material-icons ">turned_in</i>
                                                         <span class="votes"> {{idea.votePos}} </span>
                                                     </div>
                                                     <div class="card-body contentIdeaDescription">
-                                                        {{idea.description}}
+                                                                {{idea.description}}
                                                     </div>
                                                     <button class="btn btn-block btnVoteCarousel">
-                                                        Votar
+                                                                    Ver
                                                     </button>
-                                                </div> 
-                                                
+                                                </div>     
                                             </div>
                                         </div>
-                                    </owl-carousel>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

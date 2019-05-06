@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IdeasService } from './../services/ideas.service';
 import * as $ from 'jquery';
 
+declare var $:any;
+
 @Component({
   selector: 'app-chat-ideas',
   templateUrl: './chat-ideas.component.html',
@@ -21,7 +23,7 @@ export class ChatIdeasComponent implements OnInit {
   
 }
 $(function(){
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
  })
 
 

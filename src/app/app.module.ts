@@ -7,7 +7,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { UsersService } from './services/users.service';
 import { IdeasService } from './services/ideas.service';
 
-//Layouts
+// Layouts
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationLateralComponent } from './navigation-lateral/navigation-lateral.component';
