@@ -1,6 +1,9 @@
+$bacgroundComponent: #fff;
+
 .sectionAllIdeas{
-    background-color: #fff;
+    background-color: $bacgroundComponent;
     padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .sectionAllIdeas .search{
     display: flex;
@@ -11,4 +14,178 @@
 }
 .sectionAllIdeas .search .container-write-idea-board .group-message-send{
     margin-bottom: 0px !important;
+}
+.sectionAllIdeas .search .container-write-idea-board .group-message-send .input-group-search .inputFilterSearch{
+    border-radius: 50px;
+}
+.sectionAllIdeas .search .container-write-idea-board .group-message-send .input-group-search  .btnFilterSearch{
+    border-radius: 50px;
+    width: 38px;
+    margin-left: 10px;
+}
+.sectionAllIdeas .search .container-write-idea-board .group-message-send .input-group-search  .btnFilterSearch span{
+    width: 40px;
+    height: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+//Ideas
+.filterAddIdeas .filter .allIdeasContent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: .6rem;
+}
+.filterAddIdeas .filter .allIdeasContent .contenedor{
+    
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials{
+    position: relative;
+    margin: 10px 10px 10px 76px;
+    padding: 5px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.125);
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials::before,.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials::after{
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 15px 12px 0px;
+    border-style: solid;
+    border-color: transparent #fafafa;
+    left: -14px;
+    z-index: 1000;
+    top: 8px;
+}
+.filterAddIdeas .filter .allIdeasContent  .containerIdeaCredentials::before{
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 15px 12px 0px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.125);
+    left: -15px;
+    z-index: 1000;
+    top: 8px;
+}
+.filterAddIdeas .filter .allIdeasContent  .containerIdeaCredentials .imgUserInChat{
+    position: absolute;
+    top: 0;
+    left: -65px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .imgUserInChat img{
+    width: 98%;
+} 
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes{
+    width: 100%;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea{
+    font-size: 0.85rem;
+    padding: 0 0 7px 0;
+    clear: both;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #444;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike{
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    top: 5px;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike .listIconsMessage{
+    display: flex;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike .listIconsMessage .btnLikeMyHeark{
+    width: auto;
+    height: auto;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike .listIconsMessage .btnLikeMyHeark .contentBtnMyHeart{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike .listIconsMessage .btnLikeMyHeark .contentBtnMyHeart li{
+
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerNameVotes .nameUserIdea .containerBtnsLikesDslike .listIconsMessage .btnLikeMyHeark .contentBtnMyHeart li .imgHeart{
+    width: 1.8rem;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .ideaMessageChatUsers{
+    width: 100%;
+    padding: 2px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    display: block;
+    font-size: 0.8rem;
+    transition: all .5s;
+    
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .ideaMessageChatUsers .paragraphIdea{
+    color: #444;
+    text-decoration: none;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerDisplayReply{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+    border-top: 1px dotted #ddd;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerDisplayReply .replyTitle{
+    font-size: .8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .containerDisplayReply .replyTitle .btnAddNewReply{
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .btnSeeMoreMessage{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .btnSeeMoreMessage .answerMessage{
+    color: #607d8b;
+    font-size: .8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+}
+.filterAddIdeas .filter .allIdeasContent .containerIdeaCredentials .btnSeeMoreMessage .iconMoreMinus{
+    position: absolute;
+    right: 10px;
+    color: #444;
 }

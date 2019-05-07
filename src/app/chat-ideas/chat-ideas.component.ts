@@ -27,6 +27,9 @@ export class ChatIdeasComponent implements OnInit {
   layoutReply:any = document.getElementById('replyMessage')
   textReplyMessage:any = document.getElementById('input-reply-idea')
   replyButton:boolean = false;
+  commentAdd:any[] = [
+    { idea : ''}
+  ]
 
   ideas:any[] = []
 
@@ -82,7 +85,8 @@ export class ChatIdeasComponent implements OnInit {
   
   //Responder a idea
   replyIdea(i){
-    console.log(this.textReplyMessage)
+    this.commentAdd.push(this.textReplyMessage)
+    console.log(this.commentAdd)
   }
   
 }

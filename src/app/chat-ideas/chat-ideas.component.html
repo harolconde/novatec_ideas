@@ -63,8 +63,8 @@
                 <div class="col-12 col-sm-12 my-1">
                     <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
                     <div class="input-group input-group-reply-message">
-                        <form action="procesar_comentario.php" method="POST" class="formReply">
-                            <textarea type="text" class="form-control input-reply-idea" id=" input-reply-idea" placeholder="Responde esta idea" name="reply_ideas" [(ngModel)]=""></textarea>
+                        <form  class="formReply">
+                            <textarea type="text" class="form-control input-reply-idea" id=" input-reply-idea" placeholder="Responde esta idea" name="reply_ideas" [(ngModel)]="commentAdd.idea"></textarea>
                             <div class="input-group-prepend">
                                 <div class="input-group-text group-btn-reply-message">
                                     <button type="button" class="btn btn-reply-message" id="btn-reply-message" (click)="replyIdea(i)">

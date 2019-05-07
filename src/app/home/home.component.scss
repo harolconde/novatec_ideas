@@ -1,6 +1,6 @@
 //Variables
 $colorSectionWrite : #fff;
-$colorSections : #ddd;
+$colorSections : #eee;
 $colorBtnIdeas: #263238;
 //Formulario donde se escriben las ideas
 .sectionWriteIdeas{
@@ -65,12 +65,11 @@ $colorBtnIdeas: #263238;
 //Board o tablero de ideas destacadas
 .sectionBoard{
     padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
     position: relative;
     background-color: $colorSections;
 }
 .sectionBoard .cardIdeas{
-    margin-bottom: 1.8rem;
+    margin-bottom: .9rem;
     height: auto;
     padding-bottom: .8rem;
 }
@@ -157,8 +156,15 @@ $colorBtnIdeas: #263238;
 .sectionLinksIdeas{
     widows: 100%;
 }
+.sectionLinksIdeas .ideasMuertas .card:hover{
+    background: #646d70; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #646d70 0%, #b4b6c4 50%, #eeeeee 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #646d70 0%,#b4b6c4 50%,#eeeeee 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #646d70 0%,#b4b6c4 50%,#eeeeee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+    transition:  0.5s ;
+}
 .sectionLinksIdeas .containerLinkIdeas{
-    padding-top: .8rem;
     padding-bottom: .8rem;
     position: relative;
     &.containerIdeasFinishLink{
@@ -169,70 +175,79 @@ $colorBtnIdeas: #263238;
         display: flex;
         justify-content: flex-end;
     }
+    &.containerIdeasDeadLink .ideaDeadLink{
+        display:flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    &.containerIdeasDeadLink .ideaDeadLink img{
+        width: 60%;
+    }
 }
 .sectionLinksIdeas .containerLinkIdeas .ideaFinishLink{
-    width: 50%;
+    width: 100%;
     padding: 1rem;
     text-align: center;
-    background-color: $colorBtnIdeas;
+    background-color: $colorSectionWrite;
     border-radius: 3px;
 }
-.sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::before,.sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::after{
-    content: '';
-    height: 0;
-    width: 0;
-    position: absolute;
-    display: block;
-    border-width: 10px 13px 10px 0px;
-    border-style: solid;
-    border-color: transparent #263238;
-    left: 3px;
-    z-index: 999;
-    top: 17px;
-}
-.sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::before{
-    content: '';
-    height: 0;
-    width: 0;
-    position: absolute;
-    display: block;
-    border-width: 10px 13px 10px 0px;
-    border-style: solid;
-    border-color: transparent #263238;
-    left: 2px;
-    z-index: 999;
-    top: 17px;
-}
+// .sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::before,.sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::after{
+//     content: '';
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     display: block;
+//     border-width: 10px 13px 10px 0px;
+//     border-style: solid;
+//     border-color: transparent #263238;
+//     left: 3px;
+//     z-index: 999;
+//     top: 17px;
+// }
+// .sectionLinksIdeas .containerLinkIdeas .ideaFinishLink::before{
+//     content: '';
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     display: block;
+//     border-width: 10px 13px 10px 0px;
+//     border-style: solid;
+//     border-color: transparent #263238;
+//     left: 2px;
+//     z-index: 999;
+//     top: 17px;
+// }
 .sectionLinksIdeas .containerLinkIdeas .ideaDeadLink{
-    width: 50%;
+    width: 100%;
+    background-color: $colorSectionWrite;
     padding: 1rem;
     text-align: center;
-    background-color: $colorBtnIdeas;
     border-radius: 3px;   
 }
-.sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::before,.sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::after{
-    content: '';
-    height: 0;
-    width: 0;
-    position: absolute;
-    display: block;
-    border-width: 10px 13px 10px 0px;
-    border-style: solid;
-    border-color: transparent #263238;
-    right: 50%;
-    z-index: 999;
-    top: 17px;
-}
-.sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::before{
-    content: '';
-    height: 0;
-    width: 0;
-    position: absolute;
-    display: block;
-    border-width: 10px 13px 10px 0px;
-    border-style: solid;
-    border-color: transparent #263238;
-    right: 50.1%;
-    z-index: 999;
-    top: 17px;
-}
+// .sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::before,.sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::after{
+//     content: '';
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     display: block;
+//     border-width: 10px 13px 10px 0px;
+//     border-style: solid;
+//     border-color: transparent #263238;
+//     right: 50%;
+//     z-index: 999;
+//     top: 17px;
+// }
+// .sectionLinksIdeas .containerLinkIdeas .ideaDeadLink::before{
+//     content: '';
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     display: block;
+//     border-width: 10px 13px 10px 0px;
+//     border-style: solid;
+//     border-color: transparent #263238;
+//     right: 50.1%;
+//     z-index: 999;
+//     top: 17px;
+// }

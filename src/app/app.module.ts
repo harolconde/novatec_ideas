@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
 import { IdeaComponent } from './idea/idea.component';
 import { AllIdeasComponent } from './all-ideas/all-ideas.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -51,7 +52,8 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    OwlModule
+    OwlModule,
+    FormsModule
   ],
   providers: [
     UsersService,

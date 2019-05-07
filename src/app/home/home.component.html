@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6 col-xl-6 cardIdeas">
+            <div class="col-sm-12 col-lg-4 col-xl-4 cardIdeas">
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Ideas aprobadas</h5>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6 col-xl-6 cardIdeas">
+            <div class="col-sm-12 col-lg-8 col-xl-8 cardIdeas">
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Estadisticas</h5>
@@ -157,15 +157,17 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-xl-6 containerLinkIdeas containerIdeasFinishLink">
-                <div class="ideaFinishLink">
+                <div class="ideaFinishLink card">
                     <a href="" class="ideasFinalizadas">Ideas Finalizadas</a>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-6 col-xl-6 containerLinkIdeas containerIdeasDeadLink">
-                <div class="ideaDeadLink">
-                    <a href="" class="ideasMuertas">Ideas Muertas</a>
+            <a href="" class="col-sm-6 col-lg-6 col-xl-6 ideasMuertas" data-placement="top" data-toggle="tooltip" data-original-title="Ideas Muertas">
+                <div class=" containerLinkIdeas containerIdeasDeadLink">
+                    <div class="ideaDeadLink card">
+                        <img [src]="'assets/img/icons/ideaDead.svg'" alt="">
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
