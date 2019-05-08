@@ -1,8 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { OwlModule } from 'ngx-owl-carousel';
-
+import { routing } from './routes/routes.module';
 //  Servicios
 import { UsersService } from './services/users.service';
 import { IdeasService } from './services/ideas.service';
@@ -21,14 +22,16 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
 import { IdeaComponent } from './idea/idea.component';
 import { AllIdeasComponent } from './all-ideas/all-ideas.component';
-import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent},
+  //{ path: 'login', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'idea/:id', component: IdeaComponent},
   { path: 'todas', component: AllIdeasComponent},
+  { path: 'muertas', component: IdeasDeadComponent },
+  { path: 'finalizadas', component: IdeasFinishComponent },
   { path: 'board', component: BoardIdeasComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -50,6 +53,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    routing,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     OwlModule,
